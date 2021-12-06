@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html  
+xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>EmpleosApp | Listado de Ofertas de Categorias</title>
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link th:href="@{/bootstrap/css/jumbotron.css}" rel="stylesheet">
+    <link th:href="@{/bootstrap/css/sticky-footer-navbar.css}" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
+</head>
+<body>
+
+	 	<header th:insert="fragments/Header :: Header">
+	
+	    </header>
+	 	 
+	 	 
+	 	 <div class="container">
+	 	 	<p><a role="button"> </a></p>
+	 	 	<a  th:href="@{/categorias/create}" class="btn btn-primary">Crear Categoria</a>  
+	 	 	<h4 class="card-header"> <strong>Listado de Categorias de trabajo</strong> </h4>
+	 	 	<div th:if="${msg != null}" class='alert alert-success' th:text="${msg}" role='alert'></div>
+	 	 	<table class="table table-hover">
+		 	 	<thead class="thead-light">
+		 	 		<tr >
+		 	 			<th scope="col">Id</th>
+						<th scope="col">Nombre</th>
+						<th scope="col">Descripcion</th>
+
+		 	 		</tr>
+		 	 	</thead>
+		 	 	<tbody>
+		 	 		<tr th:each="categorias: ${ListCategorias}">
+		 	 			<th scope="col" th:text="${categorias.id}"></th>
+						<th scope="col" th:text="${categorias.Nombre}"></th>
+						<th scope="col" th:text="${categorias.Descripcion}"></th>
+		 	 		</tr>
+		 	 	</tbody>
+	 	 	</table>
+	 	 </div>
+	 	 
+		 <footer th:insert="fragments/footer :: footer" class="footer"> </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script> 
+ 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

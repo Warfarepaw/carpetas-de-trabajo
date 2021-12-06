@@ -1,0 +1,20 @@
+package main;
+
+public class Test {
+	
+	public static void main(String [] args) 
+	{
+		changeCase("");
+	}
+	
+	public static String changeCase(String input) 
+	{
+		for(char a: input.toCharArray()) 
+		{
+			System.out.println(a);
+		}
+		
+		return "";
+	}
+
+}

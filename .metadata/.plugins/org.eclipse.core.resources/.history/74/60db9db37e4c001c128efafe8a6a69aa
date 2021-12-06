@@ -1,0 +1,28 @@
+package example;
+
+import java.util.Scanner;
+
+public class example {
+	
+	public static void main(String[] args) {
+		evaluate();
+		
+	}
+
+	static public void evaluate() 
+	{
+		int number = 2;
+		
+		Scanner scan = new Scanner(System.in);
+		
+		int newnum = Integer.parseInt(scan.nextLine());
+		
+		if(newnum==0) 
+		{
+			System.out.println("the number its an odd");
+		}else 
+		{
+			System.out.println("the number its an non");
+		}
+	}
+}

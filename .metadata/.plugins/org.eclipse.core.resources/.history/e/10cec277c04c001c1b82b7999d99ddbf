@@ -1,0 +1,54 @@
+package example;
+
+import java.util.Scanner;
+
+public class Example {
+	
+	public static void main(String[] args) {
+		Example example = new Example();
+		example.evaluate();
+	}
+
+	 public void evaluate() 
+	{
+		int number = 2;
+		
+		Scanner scan = new Scanner(System.in);
+		
+		int newnum = Integer.parseInt(scan.nextLine()) % 2;
+		
+		if(newnum==0) 
+		{
+			System.out.println("the number its an odd");
+		}else 
+		{
+			System.out.println("the number its an non");
+		}
+	
+	}
+	 
+	 public void init() 
+	 {
+		 MathOperation addition = (int a, int b) -> a + b;
+		 MathOperation substraction = (int a, int b) -> a - b;
+		 MathOperation multiplication = (int a, int b) -> {return a*b ;}; 
+		 MathOperation division = (int a, int b) -> a/b;
+		 
+		 System.out.println("10 + 5" + operate(10, 5, addition));
+		 
+		 
+		 
+	 }
+	
+	 private int operate(int a, int b, MathOperation mathOperation){return mathOperation.operation(a, b);}; 
+	 {
+		 
+	 }
+	 
+	 public interface MathOperation
+	 {
+		 public int operation(int a, int b);
+	 }
+	 
+	 
+}

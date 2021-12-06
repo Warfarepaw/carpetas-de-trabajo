@@ -1,0 +1,34 @@
+package example;
+
+import java.util.Scanner;
+
+public class Example {
+	
+	public static void main(String[] args) {
+		Example example = new Example();
+		example.evaluate();
+	}
+
+	 public void evaluate() 
+	{
+		int number = 2;
+		
+		Scanner scan = new Scanner(System.in);
+		
+		int newnum = Integer.parseInt(scan.nextLine()) % 2;
+		
+		if(newnum==0) 
+		{
+			System.out.println("the number its an odd");
+		}else 
+		{
+			System.out.println("the number its an non");
+		}
+	
+	}
+	
+	 public void init() 
+	 {
+		 
+	 }
+}

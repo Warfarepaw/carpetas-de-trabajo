@@ -1,0 +1,23 @@
+
+
+public class PeluDo{
+	
+	public static void main(String[] args) {
+		
+		PeluDo pelu = new PeluDo();
+		System.out.println("pelu tiene "+ pelu.peluEdad() + " anos");
+	}
+	
+	public int peluEdad()
+	{
+		long a = 0;
+		float b = 0; 
+		double c = 0;
+		int d = 0;
+		Integer ab = 0;
+		
+		
+		return 31;
+	}
+
+}

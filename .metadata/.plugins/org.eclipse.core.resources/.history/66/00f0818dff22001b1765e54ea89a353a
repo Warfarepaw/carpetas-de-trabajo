@@ -1,0 +1,13 @@
+package main;
+
+public class Test {
+	
+	public static String changeCase(String input) {
+	   
+		 input = "ABCD";
+		String uperCase = input.toUpperCase();
+		String toLower = input.toLowerCase();
+		
+		return null;
+	}
+}
